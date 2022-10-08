@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/buy.css">
+    <title>Buy</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="mouse-view">
+            <h1>G502</h1>
+            <img src="../img/mouse-lateral.png" width="100%" alt="" srcset="">
+        </header>
+
+        <form>
+            <h1>Payment info</h1>
+            <div>
+                <label>E-mail</label>
+                <input type="text" placeholder="example@gmail.com">
+            </div>
+
+            <div>
+                <label>Document</label>
+                <input type="text" placeholder="999.999.999-99">
+            </div>
+
+            <div>
+                <label>Credit card</label>
+                <div class="card-info">
+                    <input id="card-number" type="number" maxlength="16" placeholder="number">
+                    <input id="cvv" type="number" placeholder="cvv">
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <div style="border-top-right-radius: 10px;">
+                    <a href="./product-info.html">
+                        <span class="fa fa-arrow-left"></span>
+                        <p>Go back</p>
+                    </a>
+                    
+                </div>
+
+                <div style="border-top-left-radius: 10px    ;">
+                    <a href="./product-info.html">
+                        <p>Purchase</p>
+                        <span class="fa fa-shopping-cart"></span>
+                    </a>
+                </div>
+            </div>
+        </form>
+
+        <footer>
+            <a href="./product-info.html">
+                <span class="fa fa-arrow-left"></span>
+            </a>
+
+            <div>
+                <div class="mouse-description">
+                    <p><span class="fa-solid fa-computer-mouse"></span> Brand: Logitech G</p>
+                    <p><span class="fa-solid fa-palette"></span> Color: Black</p>
+                    <p><span class="fa-brands fa-usb"></span>Conection: USB</p>
+                    <p><span class="fa-solid fa-circle-dot"></span> Buttons: 11</p>
+                    <p><span class="fa-solid fa-dollar-sign"></span> Price: 79.99</p>
+                </div>  
+                <p class="mobile-price">$ 79.99</p>
+            </div>
+
+            <a>
+                <span class="fa fa-shopping-cart"></span>
+            </a>
+        </footer>
+    </div>
+</body>
+
+</html>

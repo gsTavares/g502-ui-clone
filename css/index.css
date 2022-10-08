@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(#00b7f2, #54a0f7);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+
+.wrapper>header {
+    color: white;
+    font-weight: bold;
+    font-size: 1.35rem;
+    padding-block: 1.2rem;
+}
+
+.mouse-img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.mouse-img img {
+    filter: drop-shadow(5px 3px 25px black);
+}
+
+.mouse-img article {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 10%;
+}
+
+.product-slogan {
+    width: 100%;
+    margin-top: auto;
+    height: calc(80%);
+    background-color: black;
+    clip-path: polygon(0 36%, 100% 9%, 100% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+article h4 {
+    margin-top: .55rem;
+    color: #5396fa;
+    font-size: 1rem;
+}
+
+article:nth-child(3n - 1) {
+    font-size: 1.25rem;
+}
+
+.product-slogan a {
+    padding-inline: 1.85rem;
+    padding-block: 1rem;
+    background: radial-gradient(#00b7f2, #54a0f7);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1300px) {
+    .mouse-img {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .mouse-img img {
+        width: 40%;
+    }
+
+    .mouse-img article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 10%;
+    }
+
+    h2 {
+        font-size: 2.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-slogan a span {
+        transition: scale .2s ease-in-out;
+    }
+
+    .product-slogan a span:hover {
+        scale: 120%;
+    }
+
+}

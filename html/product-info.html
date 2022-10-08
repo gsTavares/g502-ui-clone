@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/product-info.css">
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column; height: 100vh;">
+        <div class="go-back">
+            <a href="./index.html">
+                <span class="fa fa-arrow-left"></span>
+            </a>
+        </div>
+
+        <header class="mouse-view">
+            <h1>G502</h1>
+            <img src="../img/mouse-lateral.png" width="100%" alt="" srcset="">
+        </header>
+
+        <section class="mouse-images">
+            <div class="img-box-container">
+                <div class="img-box">
+                    <img src="../img/pngMouse.png" alt="">
+                </div>
+            </div>
+
+            <div class="img-box-container selected-image">
+                <div class="img-box">
+                    <img src="../img/mouse-lateral.png" alt="" srcset="">
+                </div>
+            </div>
+
+            <div class="img-box-container">
+                <div class="img-box">
+                    <img src="../img/mouse-baixo.png" alt="" srcset="">
+                </div>
+            </div>
+        </section>
+
+        <section class="mouse-description">
+            <h1>A REBORN HERO</h1>
+            <p>
+                G502 Featues an advanced optical sensor
+                for maximum acurracy, customizable RGB lighting,
+                custom game profiles.
+            </p>
+        </section>
+
+        <div class="price-text">
+            <span class="fa-light fa-dollar-sign"></span>
+            <p>79.99</p>
+        </div>
+
+        <section class="prices">
+            <a href="./buy.html">
+                <span> Buy now </span>
+            </a>
+        </section>
+    </div>
+
+    <script type="text/javascript">
+        const removeActive = (elements, selected) => {
+            console.log(selected);
+            console.log(elements);
+
+            if (selected != undefined && elements.length > 0) {
+                const otherElements = elements.filter((e, index) => index != selected);
+
+                console.log('other divs = ' + otherElements);
+                console.log(otherElements);
+
+                otherElements.forEach(e => {
+                    e.classList.remove('selected-image');
+                })
+            }
+        }
+
+        const items = document.querySelectorAll(".img-box-container");
+        const allElements = []
+        let selected = undefined;
+
+
+        items.forEach((item, index) => {
+            allElements.push(item);
+
+            item.addEventListener('click', () => {
+                item.classList.add('selected-image');
+
+                selected = index;
+
+                removeActive(allElements, selected);
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>
